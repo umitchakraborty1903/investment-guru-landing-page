@@ -1,12 +1,12 @@
 
 import React, { useEffect } from 'react';
-import NavBar from '@/components/NavBar';
 import HeroSection from '@/components/HeroSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import CtaSection from '@/components/CtaSection';
 import FaqSection from '@/components/FaqSection';
 import Footer from '@/components/Footer';
+import FloatingNavBar from '@/components/FloatingNavBar';
 
 const Index = () => {
   // Smooth scroll functionality
@@ -77,10 +77,12 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
-      <NavBar />
+    <div className="min-h-screen bg-dark-900">
+      <FloatingNavBar />
       <main>
-        <HeroSection />
+        <div id="home">
+          <HeroSection />
+        </div>
         <FeaturesSection />
         <TestimonialsSection />
         <CtaSection />

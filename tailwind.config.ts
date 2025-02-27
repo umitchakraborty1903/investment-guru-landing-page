@@ -67,12 +67,21 @@ export default {
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))'
         },
-        // Custom colors for our investment app
+        dark: {
+          900: '#0f1116',
+          800: '#151822',
+          700: '#1a1f2b',
+          600: '#252b3b',
+          500: '#374151',
+          card: '#1a1f2b',
+        },
         brand: {
-          blue: '#1A73E8',
-          green: '#34A853',
-          lightBlue: '#E8F0FE',
-          darkBlue: '#0F478B',
+          blue: '#4f6df5',
+          green: '#16a34a',
+          lightBlue: '#1d2361',
+          darkBlue: '#0f1234',
+          purple: '#8b5cf6',
+          indigo: '#6366f1'
         }
       },
       borderRadius: {
@@ -82,7 +91,7 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        display: ['Clash Display', 'sans-serif'],
+        display: ['Inter', 'sans-serif'],
       },
       keyframes: {
         'accordion-down': {
@@ -129,6 +138,10 @@ export default {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' }
         },
+        'glow': {
+          '0%, 100%': { opacity: '1', boxShadow: '0 0 20px rgba(79, 109, 245, 0.5)' },
+          '50%': { opacity: '0.7', boxShadow: '0 0 30px rgba(79, 109, 245, 0.8)' }
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -142,16 +155,20 @@ export default {
         'slide-in-left': 'slide-in-left 0.4s ease-out',
         'scale-in': 'scale-in 0.3s ease-out',
         'fade-in': 'fade-in 0.4s ease-out',
+        'glow': 'glow 3s ease-in-out infinite',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'hero-pattern': 'linear-gradient(to bottom, rgba(255, 255, 255, 0.99), rgba(255, 255, 255, 0.9)), url("/images/pattern.svg")',
+        'hero-pattern': 'linear-gradient(to bottom, rgba(15, 17, 22, 0.8), rgba(15, 17, 22, 0.7)), url("/images/pattern.svg")',
+        'dark-grid': 'linear-gradient(to right, rgba(79, 109, 245, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(79, 109, 245, 0.1) 1px, transparent 1px)',
+        'dark-glow': 'radial-gradient(circle at 50% 50%, rgba(79, 109, 245, 0.1), transparent 60%)',
       },
       boxShadow: {
-        'soft': '0 10px 30px -5px rgba(0, 0, 0, 0.05)',
-        'medium': '0 10px 50px -12px rgba(0, 0, 0, 0.08)',
-        'glow': '0 0 20px rgba(26, 115, 232, 0.15)',
-        'button': '0 5px 15px rgba(26, 115, 232, 0.2)',
+        'soft': '0 10px 30px -5px rgba(0, 0, 0, 0.2)',
+        'medium': '0 10px 50px -12px rgba(0, 0, 0, 0.25)',
+        'glow': '0 0 20px rgba(79, 109, 245, 0.3)',
+        'button': '0 5px 15px rgba(79, 109, 245, 0.3)',
+        'neon': '0 0 10px rgba(79, 109, 245, 0.5), 0 0 20px rgba(79, 109, 245, 0.3), 0 0 30px rgba(79, 109, 245, 0.1)',
       },
     }
   },

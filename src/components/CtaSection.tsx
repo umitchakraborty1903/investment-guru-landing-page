@@ -5,18 +5,18 @@ import { ArrowRight, Download } from 'lucide-react';
 const CtaSection = () => {
   return (
     <section id="download" className="py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-brand-blue via-purple-700 to-brand-darkBlue"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-dark-900 via-brand-darkBlue to-dark-900"></div>
       
       {/* Animated background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB4PSIwIiB5PSIwIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSI+PC9yZWN0PjwvcGF0dGVybj48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSI+PC9yZWN0Pjwvc3ZnPg==')]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-dark-grid"></div>
       </div>
       
       <div className="container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in" data-aos="fade-up">
-              Ready to Transform Your <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-brand-lightBlue">Investment Strategy?</span>
+              Ready to Transform Your <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-brand-indigo text-shadow-glow">Investment Strategy?</span>
             </h2>
             <p className="text-lg opacity-90 mb-8 max-w-xl mx-auto lg:mx-0" data-aos="fade-up" data-aos-delay="100">
               Download InvestAI today and join over 100,000 investors who are growing their wealth with the power of artificial intelligence.
@@ -25,7 +25,7 @@ const CtaSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up" data-aos-delay="200">
               <a 
                 href="#" 
-                className="group relative overflow-hidden inline-flex items-center justify-center rounded-full bg-white text-brand-blue px-6 py-3 font-medium shadow-lg transition-all hover:shadow-xl hover:brightness-105 active:brightness-95"
+                className="group relative overflow-hidden inline-flex items-center justify-center rounded-full glass-morphism px-6 py-3 font-medium text-white shadow-glow transition-all hover:shadow-neon hover:bg-white/10 active:bg-white/5"
               >
                 <span className="relative z-10 flex items-center">
                   <svg className="mr-2 h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
@@ -33,11 +33,11 @@ const CtaSection = () => {
                   </svg>
                   iOS App Store
                 </span>
-                <span className="absolute inset-0 bg-gradient-to-r from-brand-lightBlue/20 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                <span className="absolute inset-0 bg-gradient-to-r from-brand-blue/20 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
               </a>
               <a 
                 href="#" 
-                className="group relative overflow-hidden inline-flex items-center justify-center rounded-full bg-white text-brand-blue px-6 py-3 font-medium shadow-lg transition-all hover:shadow-xl hover:brightness-105 active:brightness-95"
+                className="group relative overflow-hidden inline-flex items-center justify-center rounded-full glass-morphism px-6 py-3 font-medium text-white shadow-glow transition-all hover:shadow-neon hover:bg-white/10 active:bg-white/5"
               >
                 <span className="relative z-10 flex items-center">
                   <svg className="mr-2 h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
@@ -45,7 +45,7 @@ const CtaSection = () => {
                   </svg>
                   Google Play
                 </span>
-                <span className="absolute inset-0 bg-gradient-to-r from-brand-lightBlue/20 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                <span className="absolute inset-0 bg-gradient-to-r from-brand-blue/20 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
               </a>
             </div>
             
@@ -55,37 +55,37 @@ const CtaSection = () => {
           </div>
           
           <div className="relative max-w-md mx-auto" data-aos="fade-left">
-            <div className="absolute inset-0 bg-white/10 rounded-[40px] blur-[30px] z-0" />
+            <div className="absolute inset-0 bg-brand-blue/10 rounded-[40px] blur-[30px] z-0" />
             
-            <div className="relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-6 z-10 shadow-2xl animate-float" style={{ animationDuration: '7s' }}>
+            <div className="relative bg-dark-700/40 backdrop-blur-lg border border-dark-600/50 rounded-3xl p-6 z-10 shadow-glow animate-float" style={{ animationDuration: '7s' }}>
               <div className="flex justify-between items-center mb-6">
                 <div>
                   <h3 className="text-xl font-bold text-white">Portfolio Overview</h3>
-                  <p className="text-sm text-white/80">Last updated: Just now</p>
+                  <p className="text-sm text-white/70">Last updated: Just now</p>
                 </div>
-                <span className="text-xl bg-white/20 rounded-full p-2 backdrop-blur-sm">📊</span>
+                <span className="text-xl bg-gradient-to-br from-brand-blue to-brand-indigo rounded-full p-2 shadow-glow">📊</span>
               </div>
               
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 mb-6 border border-white/10">
+              <div className="bg-dark-600/50 backdrop-blur-sm rounded-xl p-4 mb-6 border border-dark-600/80">
                 <div className="flex justify-between mb-1">
-                  <span className="text-sm text-white/90">Total Value</span>
+                  <span className="text-sm text-white/80">Total Value</span>
                   <span className="font-semibold text-white">$42,584.26</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-sm text-white/90">Total Gain</span>
+                  <span className="text-sm text-white/80">Total Gain</span>
                   <span className="font-semibold text-green-400">+$5,241.32 (14.2%)</span>
                 </div>
               </div>
               
               <div className="space-y-4 mb-6">
-                <div className="flex justify-between items-center p-3 bg-white/10 backdrop-blur-sm rounded-lg border border-white/10 hover:bg-white/20 transition-colors duration-300">
+                <div className="flex justify-between items-center p-3 bg-dark-600/50 backdrop-blur-sm rounded-lg border border-dark-600/80 hover:bg-dark-600/80 transition-colors duration-300">
                   <div className="flex items-center">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center mr-3 text-white shadow-lg">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-brand-blue to-brand-indigo flex items-center justify-center mr-3 text-white shadow-glow">
                       T
                     </div>
                     <div>
                       <p className="font-medium text-white">Tesla Inc.</p>
-                      <p className="text-xs text-white/80">12 shares</p>
+                      <p className="text-xs text-white/70">12 shares</p>
                     </div>
                   </div>
                   <div className="text-right">
@@ -94,14 +94,14 @@ const CtaSection = () => {
                   </div>
                 </div>
                 
-                <div className="flex justify-between items-center p-3 bg-white/10 backdrop-blur-sm rounded-lg border border-white/10 hover:bg-white/20 transition-colors duration-300">
+                <div className="flex justify-between items-center p-3 bg-dark-600/50 backdrop-blur-sm rounded-lg border border-dark-600/80 hover:bg-dark-600/80 transition-colors duration-300">
                   <div className="flex items-center">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center mr-3 text-white shadow-lg">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-brand-blue to-brand-indigo flex items-center justify-center mr-3 text-white shadow-glow">
                       A
                     </div>
                     <div>
                       <p className="font-medium text-white">Apple Inc.</p>
-                      <p className="text-xs text-white/80">30 shares</p>
+                      <p className="text-xs text-white/70">30 shares</p>
                     </div>
                   </div>
                   <div className="text-right">
@@ -110,14 +110,14 @@ const CtaSection = () => {
                   </div>
                 </div>
                 
-                <div className="flex justify-between items-center p-3 bg-white/10 backdrop-blur-sm rounded-lg border border-white/10 hover:bg-white/20 transition-colors duration-300">
+                <div className="flex justify-between items-center p-3 bg-dark-600/50 backdrop-blur-sm rounded-lg border border-dark-600/80 hover:bg-dark-600/80 transition-colors duration-300">
                   <div className="flex items-center">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center mr-3 text-white shadow-lg">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-brand-blue to-brand-indigo flex items-center justify-center mr-3 text-white shadow-glow">
                       G
                     </div>
                     <div>
                       <p className="font-medium text-white">Google</p>
-                      <p className="text-xs text-white/80">8 shares</p>
+                      <p className="text-xs text-white/70">8 shares</p>
                     </div>
                   </div>
                   <div className="text-right">
@@ -127,7 +127,7 @@ const CtaSection = () => {
                 </div>
               </div>
               
-              <button className="w-full py-3 bg-white text-brand-blue rounded-xl font-semibold flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-brand-lightBlue hover:text-brand-blue group">
+              <button className="w-full py-3 bg-gradient-to-r from-brand-blue to-brand-indigo text-white rounded-xl font-semibold flex items-center justify-center shadow-glow hover:shadow-neon transition-all duration-300 hover:brightness-110 group">
                 View Complete Portfolio
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
               </button>
@@ -137,8 +137,8 @@ const CtaSection = () => {
       </div>
       
       {/* Background elements */}
-      <div className="absolute -top-24 -left-24 w-96 h-96 bg-purple-800 rounded-full blur-3xl opacity-30 -z-10 animate-pulse-slow" />
-      <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-brand-darkBlue rounded-full blur-3xl opacity-30 -z-10 animate-pulse-slow" style={{ animationDelay: '1s' }} />
+      <div className="absolute -top-24 -left-24 w-96 h-96 bg-brand-blue/20 rounded-full blur-3xl opacity-30 -z-10 animate-pulse-slow" />
+      <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-brand-indigo/20 rounded-full blur-3xl opacity-30 -z-10 animate-pulse-slow" style={{ animationDelay: '1s' }} />
     </section>
   );
 };

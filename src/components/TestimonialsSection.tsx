@@ -28,10 +28,12 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="py-20 relative overflow-hidden bg-gradient-to-b from-white via-brand-lightBlue/20 to-white">
+    <section id="testimonials" className="py-20 relative overflow-hidden bg-gradient-to-b from-dark-900 via-dark-700 to-dark-900">
+      <div className="absolute inset-0 bg-dark-glow bg-no-repeat bg-center opacity-40 mix-blend-soft-light"></div>
+      
       <div className="container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="section-title bg-gradient-to-r from-brand-blue via-purple-600 to-brand-green bg-clip-text text-transparent" data-aos="fade-up">
+          <h2 className="section-title bg-gradient-to-r from-brand-blue via-brand-purple to-brand-indigo bg-clip-text text-transparent text-shadow-glow" data-aos="fade-up">
             What Our Users Are Saying
           </h2>
           <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
@@ -43,7 +45,7 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index} 
-              className="testimonial-card flex flex-col h-full bg-white/80 backdrop-blur-sm border border-white/50 hover:border-brand-blue/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className="testimonial-card flex flex-col h-full"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
@@ -51,15 +53,15 @@ const TestimonialsSection = () => {
                 {[...Array(5)].map((_, i) => (
                   <Star 
                     key={i} 
-                    className={`h-5 w-5 ${i < testimonial.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} 
+                    className={`h-5 w-5 ${i < testimonial.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-700'}`} 
                   />
                 ))}
               </div>
               
-              <p className="text-foreground mb-6 flex-grow">"{testimonial.content}"</p>
+              <p className="text-white mb-6 flex-grow">"{testimonial.content}"</p>
               
               <div className="flex items-center mt-auto">
-                <div className="h-12 w-12 rounded-full mr-4 overflow-hidden ring-2 ring-white shadow-md">
+                <div className="h-12 w-12 rounded-full mr-4 overflow-hidden ring-2 ring-brand-blue/30 shadow-glow">
                   <img 
                     src={testimonial.avatar} 
                     alt={testimonial.author} 
@@ -67,7 +69,7 @@ const TestimonialsSection = () => {
                   />
                 </div>
                 <div>
-                  <h4 className="font-semibold">{testimonial.author}</h4>
+                  <h4 className="font-semibold text-white">{testimonial.author}</h4>
                   <p className="text-sm text-muted-foreground">{testimonial.position}</p>
                 </div>
               </div>
@@ -76,7 +78,7 @@ const TestimonialsSection = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-brand-blue/10 to-brand-green/10 backdrop-blur-sm border border-white/50 px-4 py-2 text-sm font-medium shadow-sm">
+          <div className="inline-flex items-center justify-center rounded-full glass-morphism px-4 py-2 text-sm font-medium shadow-glow">
             <span className="mr-2">⭐</span>
             4.9/5 average rating from over 12,000 reviews
           </div>
@@ -84,8 +86,8 @@ const TestimonialsSection = () => {
       </div>
       
       {/* Decorative elements */}
-      <div className="absolute top-1/4 right-0 w-72 h-72 bg-gradient-to-br from-brand-blue/10 to-purple-500/10 rounded-full blur-3xl -z-10 animate-pulse-slow" />
-      <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-gradient-to-br from-purple-500/10 to-brand-green/10 rounded-full blur-3xl -z-10 animate-pulse-slow" style={{ animationDelay: '1.5s' }}/>
+      <div className="absolute top-1/4 right-0 w-72 h-72 bg-gradient-to-br from-brand-blue/10 to-brand-purple/10 rounded-full blur-3xl -z-10 animate-pulse-slow" />
+      <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-gradient-to-br from-brand-purple/10 to-brand-indigo/10 rounded-full blur-3xl -z-10 animate-pulse-slow" style={{ animationDelay: '1.5s' }}/>
     </section>
   );
 };

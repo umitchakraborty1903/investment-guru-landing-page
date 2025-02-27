@@ -37,10 +37,10 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section id="features" className="py-20 bg-gradient-to-b from-white via-accent/40 to-white relative overflow-hidden">
+    <section id="features" className="py-20 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900 relative overflow-hidden">
       <div className="container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="section-title text-balance bg-gradient-to-r from-brand-blue via-purple-600 to-brand-green bg-clip-text text-transparent animate-fade-in" data-aos="fade-up">
+          <h2 className="section-title text-balance bg-gradient-to-r from-brand-blue via-brand-purple to-brand-indigo bg-clip-text text-transparent text-shadow-glow animate-fade-in" data-aos="fade-up">
             AI-Powered Features That Make Investing Simple
           </h2>
           <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
@@ -52,11 +52,11 @@ const FeaturesSection = () => {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="feature-card group bg-white/80 backdrop-blur-sm border border-white/50 hover:border-brand-blue/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className="feature-card group"
               data-aos="fade-up"
               data-aos-delay={index * 50}
             >
-              <div className="feature-icon group-hover:bg-gradient-to-r from-brand-blue to-brand-darkBlue group-hover:text-white transition-all duration-300">
+              <div className="feature-icon group-hover:bg-gradient-to-r from-brand-blue to-brand-indigo group-hover:text-white group-hover:shadow-glow transition-all duration-300">
                 {feature.icon}
               </div>
               <h3 className="text-xl font-semibold mb-2 group-hover:text-brand-blue transition-colors">{feature.title}</h3>
@@ -67,8 +67,9 @@ const FeaturesSection = () => {
       </div>
       
       {/* Decorative elements */}
-      <div className="absolute -top-20 -right-20 w-80 h-80 bg-gradient-to-br from-brand-blue/10 to-purple-500/10 rounded-full blur-3xl -z-10" />
-      <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-gradient-to-br from-purple-500/10 to-brand-green/10 rounded-full blur-3xl -z-10" />
+      <div className="absolute -top-20 -right-20 w-80 h-80 bg-gradient-to-br from-brand-blue/5 to-brand-purple/5 rounded-full blur-3xl -z-10" />
+      <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-gradient-to-br from-brand-purple/5 to-brand-indigo/5 rounded-full blur-3xl -z-10" />
+      <div className="absolute inset-0 bg-dark-glow bg-no-repeat bg-center opacity-30 mix-blend-soft-light -z-10"></div>
     </section>
   );
 };
