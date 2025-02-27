@@ -28,10 +28,10 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="py-20 relative overflow-hidden">
+    <section id="testimonials" className="py-20 relative overflow-hidden bg-gradient-to-b from-white via-brand-lightBlue/20 to-white">
       <div className="container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="section-title" data-aos="fade-up">
+          <h2 className="section-title bg-gradient-to-r from-brand-blue via-purple-600 to-brand-green bg-clip-text text-transparent" data-aos="fade-up">
             What Our Users Are Saying
           </h2>
           <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
@@ -43,7 +43,7 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index} 
-              className="testimonial-card flex flex-col h-full"
+              className="testimonial-card flex flex-col h-full bg-white/80 backdrop-blur-sm border border-white/50 hover:border-brand-blue/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
@@ -59,11 +59,13 @@ const TestimonialsSection = () => {
               <p className="text-foreground mb-6 flex-grow">"{testimonial.content}"</p>
               
               <div className="flex items-center mt-auto">
-                <img 
-                  src={testimonial.avatar} 
-                  alt={testimonial.author} 
-                  className="h-12 w-12 rounded-full mr-4 object-cover" 
-                />
+                <div className="h-12 w-12 rounded-full mr-4 overflow-hidden ring-2 ring-white shadow-md">
+                  <img 
+                    src={testimonial.avatar} 
+                    alt={testimonial.author} 
+                    className="h-full w-full object-cover" 
+                  />
+                </div>
                 <div>
                   <h4 className="font-semibold">{testimonial.author}</h4>
                   <p className="text-sm text-muted-foreground">{testimonial.position}</p>
@@ -74,7 +76,7 @@ const TestimonialsSection = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center justify-center rounded-full bg-accent px-4 py-2 text-sm font-medium">
+          <div className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-brand-blue/10 to-brand-green/10 backdrop-blur-sm border border-white/50 px-4 py-2 text-sm font-medium shadow-sm">
             <span className="mr-2">⭐</span>
             4.9/5 average rating from over 12,000 reviews
           </div>
@@ -82,8 +84,8 @@ const TestimonialsSection = () => {
       </div>
       
       {/* Decorative elements */}
-      <div className="absolute top-1/4 right-0 w-72 h-72 bg-brand-blue/5 rounded-full blur-3xl -z-10" />
-      <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-brand-green/5 rounded-full blur-3xl -z-10" />
+      <div className="absolute top-1/4 right-0 w-72 h-72 bg-gradient-to-br from-brand-blue/10 to-purple-500/10 rounded-full blur-3xl -z-10 animate-pulse-slow" />
+      <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-gradient-to-br from-purple-500/10 to-brand-green/10 rounded-full blur-3xl -z-10 animate-pulse-slow" style={{ animationDelay: '1.5s' }}/>
     </section>
   );
 };

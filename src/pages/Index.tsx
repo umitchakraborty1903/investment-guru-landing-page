@@ -44,11 +44,13 @@ const Index = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          const el = entry.target;
+          const el = entry.target as HTMLElement;
           
           if (entry.isIntersecting) {
             el.classList.add('animate-fadeIn');
-            el.style.opacity = '1';
+            if (el.style) {
+              el.style.opacity = '1';
+            }
           }
         });
       },
@@ -61,8 +63,10 @@ const Index = () => {
     
     const elementsToAnimate = document.querySelectorAll('[data-aos]');
     elementsToAnimate.forEach((el) => {
-      el.classList.add('opacity-0');
-      observer.observe(el);
+      if (el instanceof HTMLElement) {
+        el.classList.add('opacity-0');
+        observer.observe(el);
+      }
     });
     
     return () => {

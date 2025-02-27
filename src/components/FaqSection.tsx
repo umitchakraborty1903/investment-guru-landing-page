@@ -36,10 +36,10 @@ const faqs = [
 
 const FaqSection = () => {
   return (
-    <section id="faq" className="py-20 bg-accent/30">
-      <div className="container">
+    <section id="faq" className="py-20 bg-gradient-to-b from-white via-accent/30 to-white relative overflow-hidden">
+      <div className="container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="section-title" data-aos="fade-up">
+          <h2 className="section-title bg-gradient-to-r from-brand-blue via-purple-600 to-brand-green bg-clip-text text-transparent" data-aos="fade-up">
             Frequently Asked Questions
           </h2>
           <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
@@ -53,12 +53,12 @@ const FaqSection = () => {
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="border border-border rounded-lg overflow-hidden bg-white shadow-sm"
+                className="border border-white/80 rounded-lg overflow-hidden bg-white/80 backdrop-blur-sm shadow-md transition-all duration-300 hover:shadow-lg hover:border-brand-blue/20"
               >
-                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-accent/30 transition-colors">
+                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-accent/30 transition-colors data-[state=open]:bg-brand-lightBlue/20 data-[state=open]:text-brand-blue">
                   <span className="text-lg font-medium">{faq.question}</span>
                 </AccordionTrigger>
-                <AccordionContent className="px-6 py-4 text-muted-foreground">
+                <AccordionContent className="px-6 py-4 text-muted-foreground border-t border-white/50">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -70,12 +70,17 @@ const FaqSection = () => {
           <p className="text-muted-foreground mb-4">Still have questions?</p>
           <a 
             href="#" 
-            className="btn-outline inline-flex items-center"
+            className="group relative overflow-hidden rounded-full bg-gradient-to-r from-brand-blue to-brand-darkBlue px-6 py-3 font-medium text-white shadow-lg transition-all hover:shadow-xl hover:brightness-105 active:brightness-95"
           >
-            Contact Support
+            <span className="relative z-10">Contact Support</span>
+            <span className="absolute inset-0 bg-gradient-to-r from-brand-blue to-brand-darkBlue opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></span>
           </a>
         </div>
       </div>
+      
+      {/* Decorative elements */}
+      <div className="absolute top-1/3 left-0 w-72 h-72 bg-gradient-to-br from-brand-blue/10 to-purple-500/10 rounded-full blur-3xl -z-10 animate-pulse-slow" />
+      <div className="absolute bottom-1/3 right-0 w-72 h-72 bg-gradient-to-br from-purple-500/10 to-brand-green/10 rounded-full blur-3xl -z-10 animate-pulse-slow" style={{ animationDelay: '1.5s' }}/>
     </section>
   );
 };
