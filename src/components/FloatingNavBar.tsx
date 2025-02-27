@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Home, BarChart2, MessageSquare, HelpCircle, Download } from 'lucide-react';
+import { Home, BookOpen, Github, Linkedin, Twitter, Youtube, Sun } from 'lucide-react';
 
 const FloatingNavBar = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -48,95 +48,82 @@ const FloatingNavBar = () => {
   };
 
   return (
-    <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 px-2 py-3 rounded-2xl bg-dark-800/90 backdrop-blur-xl border border-dark-700/50 shadow-lg">
-      <div className="flex items-center gap-1 relative">
-        {/* Glow Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/10 via-brand-purple/10 to-brand-indigo/10 rounded-2xl blur-xl"></div>
-        
-        {/* Navigation Items */}
+    <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full shadow-lg animate-fade-in">
+      <div className="flex items-center divide-x divide-white/10 px-3 relative">
         <button 
-          className={`relative group px-4 py-2 rounded-xl transition-all duration-300 ${
-            activeSection === 'home' 
-              ? 'bg-gradient-to-r from-brand-blue to-brand-indigo text-white shadow-lg' 
-              : 'hover:bg-dark-700/50 text-gray-400'
-          }`}
+          className="relative group p-3.5 text-white/80 hover:text-white transition-colors"
           onClick={() => scrollToSection('home')}
           aria-label="Home"
         >
-          <Home className="w-5 h-5" />
-          <span className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap text-white">
+          <Home className={`w-5 h-5 ${activeSection === 'home' ? 'text-white' : ''}`} />
+          <span className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-200 bg-dark-800/90 text-white px-2 py-1 rounded whitespace-nowrap">
             Home
           </span>
         </button>
         
         <button 
-          className={`relative group px-4 py-2 rounded-xl transition-all duration-300 ${
-            activeSection === 'features' 
-              ? 'bg-gradient-to-r from-brand-blue to-brand-indigo text-white shadow-lg' 
-              : 'hover:bg-dark-700/50 text-gray-400'
-          }`}
+          className="relative group p-3.5 text-white/80 hover:text-white transition-colors"
           onClick={() => scrollToSection('features')}
           aria-label="Features"
         >
-          <BarChart2 className="w-5 h-5" />
-          <span className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap text-white">
+          <BookOpen className={`w-5 h-5 ${activeSection === 'features' ? 'text-white' : ''}`} />
+          <span className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-200 bg-dark-800/90 text-white px-2 py-1 rounded whitespace-nowrap">
             Features
           </span>
         </button>
         
         <button 
-          className={`relative group px-4 py-2 rounded-xl transition-all duration-300 ${
-            activeSection === 'testimonials' 
-              ? 'bg-gradient-to-r from-brand-blue to-brand-indigo text-white shadow-lg' 
-              : 'hover:bg-dark-700/50 text-gray-400'
-          }`}
+          className="relative group p-3.5 text-white/80 hover:text-white transition-colors"
           onClick={() => scrollToSection('testimonials')}
           aria-label="Testimonials"
         >
-          <MessageSquare className="w-5 h-5" />
-          <span className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap text-white">
+          <Github className={`w-5 h-5 ${activeSection === 'testimonials' ? 'text-white' : ''}`} />
+          <span className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-200 bg-dark-800/90 text-white px-2 py-1 rounded whitespace-nowrap">
             Reviews
           </span>
         </button>
         
         <button 
-          className={`relative group px-4 py-2 rounded-xl transition-all duration-300 ${
-            activeSection === 'faq' 
-              ? 'bg-gradient-to-r from-brand-blue to-brand-indigo text-white shadow-lg' 
-              : 'hover:bg-dark-700/50 text-gray-400'
-          }`}
+          className="relative group p-3.5 text-white/80 hover:text-white transition-colors"
           onClick={() => scrollToSection('faq')}
           aria-label="FAQ"
         >
-          <HelpCircle className="w-5 h-5" />
-          <span className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap text-white">
+          <Linkedin className={`w-5 h-5 ${activeSection === 'faq' ? 'text-white' : ''}`} />
+          <span className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-200 bg-dark-800/90 text-white px-2 py-1 rounded whitespace-nowrap">
             FAQ
           </span>
         </button>
         
         <button 
-          className={`relative group px-4 py-2 rounded-xl transition-all duration-300 ${
-            activeSection === 'download' 
-              ? 'bg-gradient-to-r from-brand-blue to-brand-indigo text-white shadow-lg' 
-              : 'hover:bg-dark-700/50 text-gray-400'
-          }`}
+          className="relative group p-3.5 text-white/80 hover:text-white transition-colors"
           onClick={() => scrollToSection('download')}
           aria-label="Download"
         >
-          <Download className="w-5 h-5" />
-          <span className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap text-white">
+          <Twitter className={`w-5 h-5 ${activeSection === 'download' ? 'text-white' : ''}`} />
+          <span className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-200 bg-dark-800/90 text-white px-2 py-1 rounded whitespace-nowrap">
             Download
           </span>
         </button>
-
-        {/* Active Section Indicator */}
-        <div 
-          className="absolute bottom-0 h-0.5 bg-gradient-to-r from-brand-blue via-brand-purple to-brand-indigo transition-all duration-300 rounded-full"
-          style={{
-            left: `${(activeSection === 'home' ? 0 : activeSection === 'features' ? 1 : activeSection === 'testimonials' ? 2 : activeSection === 'faq' ? 3 : 4) * 20}%`,
-            width: '20%'
-          }}
-        />
+        
+        <button 
+          className="relative group p-3.5 text-white/80 hover:text-white transition-colors"
+          aria-label="Theme"
+        >
+          <Youtube className="w-5 h-5" />
+          <span className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-200 bg-dark-800/90 text-white px-2 py-1 rounded whitespace-nowrap">
+            Videos
+          </span>
+        </button>
+        
+        <button 
+          className="relative group p-3.5 text-white/80 hover:text-white transition-colors"
+          aria-label="Toggle Light Mode"
+        >
+          <Sun className="w-5 h-5" />
+          <span className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-200 bg-dark-800/90 text-white px-2 py-1 rounded whitespace-nowrap">
+            Theme
+          </span>
+        </button>
       </div>
     </div>
   );
