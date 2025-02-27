@@ -48,52 +48,95 @@ const FloatingNavBar = () => {
   };
 
   return (
-    <div className="floating-navbar animate-glow">
-      <div className="flex items-center">
+    <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 px-2 py-3 rounded-2xl bg-dark-800/90 backdrop-blur-xl border border-dark-700/50 shadow-lg">
+      <div className="flex items-center gap-1 relative">
+        {/* Glow Background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/10 via-brand-purple/10 to-brand-indigo/10 rounded-2xl blur-xl"></div>
+        
+        {/* Navigation Items */}
         <button 
-          className={`nav-item ${activeSection === 'home' ? 'nav-item-active' : ''}`}
+          className={`relative group px-4 py-2 rounded-xl transition-all duration-300 ${
+            activeSection === 'home' 
+              ? 'bg-gradient-to-r from-brand-blue to-brand-indigo text-white shadow-lg' 
+              : 'hover:bg-dark-700/50 text-gray-400'
+          }`}
           onClick={() => scrollToSection('home')}
           aria-label="Home"
         >
           <Home className="w-5 h-5" />
-          {activeSection === 'home' && <div className="nav-indicator"></div>}
+          <span className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap text-white">
+            Home
+          </span>
         </button>
         
         <button 
-          className={`nav-item ${activeSection === 'features' ? 'nav-item-active' : ''}`}
+          className={`relative group px-4 py-2 rounded-xl transition-all duration-300 ${
+            activeSection === 'features' 
+              ? 'bg-gradient-to-r from-brand-blue to-brand-indigo text-white shadow-lg' 
+              : 'hover:bg-dark-700/50 text-gray-400'
+          }`}
           onClick={() => scrollToSection('features')}
           aria-label="Features"
         >
           <BarChart2 className="w-5 h-5" />
-          {activeSection === 'features' && <div className="nav-indicator"></div>}
+          <span className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap text-white">
+            Features
+          </span>
         </button>
         
         <button 
-          className={`nav-item ${activeSection === 'testimonials' ? 'nav-item-active' : ''}`}
+          className={`relative group px-4 py-2 rounded-xl transition-all duration-300 ${
+            activeSection === 'testimonials' 
+              ? 'bg-gradient-to-r from-brand-blue to-brand-indigo text-white shadow-lg' 
+              : 'hover:bg-dark-700/50 text-gray-400'
+          }`}
           onClick={() => scrollToSection('testimonials')}
           aria-label="Testimonials"
         >
           <MessageSquare className="w-5 h-5" />
-          {activeSection === 'testimonials' && <div className="nav-indicator"></div>}
+          <span className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap text-white">
+            Reviews
+          </span>
         </button>
         
         <button 
-          className={`nav-item ${activeSection === 'faq' ? 'nav-item-active' : ''}`}
+          className={`relative group px-4 py-2 rounded-xl transition-all duration-300 ${
+            activeSection === 'faq' 
+              ? 'bg-gradient-to-r from-brand-blue to-brand-indigo text-white shadow-lg' 
+              : 'hover:bg-dark-700/50 text-gray-400'
+          }`}
           onClick={() => scrollToSection('faq')}
           aria-label="FAQ"
         >
           <HelpCircle className="w-5 h-5" />
-          {activeSection === 'faq' && <div className="nav-indicator"></div>}
+          <span className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap text-white">
+            FAQ
+          </span>
         </button>
         
         <button 
-          className={`nav-item ${activeSection === 'download' ? 'nav-item-active' : ''}`}
+          className={`relative group px-4 py-2 rounded-xl transition-all duration-300 ${
+            activeSection === 'download' 
+              ? 'bg-gradient-to-r from-brand-blue to-brand-indigo text-white shadow-lg' 
+              : 'hover:bg-dark-700/50 text-gray-400'
+          }`}
           onClick={() => scrollToSection('download')}
           aria-label="Download"
         >
           <Download className="w-5 h-5" />
-          {activeSection === 'download' && <div className="nav-indicator"></div>}
+          <span className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap text-white">
+            Download
+          </span>
         </button>
+
+        {/* Active Section Indicator */}
+        <div 
+          className="absolute bottom-0 h-0.5 bg-gradient-to-r from-brand-blue via-brand-purple to-brand-indigo transition-all duration-300 rounded-full"
+          style={{
+            left: `${(activeSection === 'home' ? 0 : activeSection === 'features' ? 1 : activeSection === 'testimonials' ? 2 : activeSection === 'faq' ? 3 : 4) * 20}%`,
+            width: '20%'
+          }}
+        />
       </div>
     </div>
   );
