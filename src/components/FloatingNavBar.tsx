@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Home, BookOpen, Github, Linkedin, Twitter, Youtube, Sun } from 'lucide-react';
+import { Home, BookOpen, MessageSquare, HelpCircle, Download, User, Star } from 'lucide-react';
 
 const FloatingNavBar = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -48,80 +48,95 @@ const FloatingNavBar = () => {
   };
 
   return (
-    <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full shadow-lg animate-fade-in">
-      <div className="flex items-center divide-x divide-white/10 px-3 relative">
+    <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 glass-morphism rounded-full shadow-glow animate-fade-in">
+      <div className="flex items-center px-2 py-1 relative">
         <button 
-          className="relative group p-3.5 text-white/80 hover:text-white transition-colors"
+          className={`relative group p-3 transition-all duration-300 ${activeSection === 'home' ? 'text-brand-blue' : 'text-white/80 hover:text-white'}`}
           onClick={() => scrollToSection('home')}
           aria-label="Home"
         >
-          <Home className={`w-5 h-5 ${activeSection === 'home' ? 'text-white' : ''}`} />
+          <Home className="w-5 h-5" />
           <span className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-200 bg-dark-800/90 text-white px-2 py-1 rounded whitespace-nowrap">
             Home
           </span>
+          {activeSection === 'home' && (
+            <span className="absolute -bottom-1 left-1/2 w-5 h-1 bg-brand-blue rounded-full transform -translate-x-1/2"></span>
+          )}
         </button>
         
         <button 
-          className="relative group p-3.5 text-white/80 hover:text-white transition-colors"
+          className={`relative group p-3 transition-all duration-300 ${activeSection === 'features' ? 'text-brand-blue' : 'text-white/80 hover:text-white'}`}
           onClick={() => scrollToSection('features')}
           aria-label="Features"
         >
-          <BookOpen className={`w-5 h-5 ${activeSection === 'features' ? 'text-white' : ''}`} />
+          <BookOpen className="w-5 h-5" />
           <span className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-200 bg-dark-800/90 text-white px-2 py-1 rounded whitespace-nowrap">
             Features
           </span>
+          {activeSection === 'features' && (
+            <span className="absolute -bottom-1 left-1/2 w-5 h-1 bg-brand-blue rounded-full transform -translate-x-1/2"></span>
+          )}
         </button>
         
         <button 
-          className="relative group p-3.5 text-white/80 hover:text-white transition-colors"
+          className={`relative group p-3 transition-all duration-300 ${activeSection === 'testimonials' ? 'text-brand-blue' : 'text-white/80 hover:text-white'}`}
           onClick={() => scrollToSection('testimonials')}
           aria-label="Testimonials"
         >
-          <Github className={`w-5 h-5 ${activeSection === 'testimonials' ? 'text-white' : ''}`} />
+          <Star className="w-5 h-5" />
           <span className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-200 bg-dark-800/90 text-white px-2 py-1 rounded whitespace-nowrap">
             Reviews
           </span>
+          {activeSection === 'testimonials' && (
+            <span className="absolute -bottom-1 left-1/2 w-5 h-1 bg-brand-blue rounded-full transform -translate-x-1/2"></span>
+          )}
         </button>
         
         <button 
-          className="relative group p-3.5 text-white/80 hover:text-white transition-colors"
+          className={`relative group p-3 transition-all duration-300 ${activeSection === 'faq' ? 'text-brand-blue' : 'text-white/80 hover:text-white'}`}
           onClick={() => scrollToSection('faq')}
           aria-label="FAQ"
         >
-          <Linkedin className={`w-5 h-5 ${activeSection === 'faq' ? 'text-white' : ''}`} />
+          <HelpCircle className="w-5 h-5" />
           <span className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-200 bg-dark-800/90 text-white px-2 py-1 rounded whitespace-nowrap">
             FAQ
           </span>
+          {activeSection === 'faq' && (
+            <span className="absolute -bottom-1 left-1/2 w-5 h-1 bg-brand-blue rounded-full transform -translate-x-1/2"></span>
+          )}
         </button>
         
         <button 
-          className="relative group p-3.5 text-white/80 hover:text-white transition-colors"
+          className={`relative group p-3 transition-all duration-300 ${activeSection === 'download' ? 'text-brand-blue' : 'text-white/80 hover:text-white'}`}
           onClick={() => scrollToSection('download')}
           aria-label="Download"
         >
-          <Twitter className={`w-5 h-5 ${activeSection === 'download' ? 'text-white' : ''}`} />
+          <Download className="w-5 h-5" />
           <span className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-200 bg-dark-800/90 text-white px-2 py-1 rounded whitespace-nowrap">
             Download
           </span>
+          {activeSection === 'download' && (
+            <span className="absolute -bottom-1 left-1/2 w-5 h-1 bg-brand-blue rounded-full transform -translate-x-1/2"></span>
+          )}
         </button>
         
         <button 
-          className="relative group p-3.5 text-white/80 hover:text-white transition-colors"
-          aria-label="Theme"
+          className="relative group p-3 text-white/80 hover:text-white transition-colors"
+          aria-label="Contact"
         >
-          <Youtube className="w-5 h-5" />
+          <MessageSquare className="w-5 h-5" />
           <span className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-200 bg-dark-800/90 text-white px-2 py-1 rounded whitespace-nowrap">
-            Videos
+            Contact
           </span>
         </button>
         
         <button 
-          className="relative group p-3.5 text-white/80 hover:text-white transition-colors"
-          aria-label="Toggle Light Mode"
+          className="relative group p-3 text-white/80 hover:text-white transition-colors"
+          aria-label="Account"
         >
-          <Sun className="w-5 h-5" />
+          <User className="w-5 h-5" />
           <span className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-200 bg-dark-800/90 text-white px-2 py-1 rounded whitespace-nowrap">
-            Theme
+            Account
           </span>
         </button>
       </div>

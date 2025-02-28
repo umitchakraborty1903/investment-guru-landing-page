@@ -21,7 +21,7 @@ export function TestimonialsSection({
 }: TestimonialsSectionProps) {
   return (
     <section className={cn(
-      "bg-background text-foreground",
+      "bg-transparent text-foreground", // Changed from bg-background to bg-transparent
       "py-12 sm:py-24 md:py-32 px-0",
       className
     )}>
@@ -49,8 +49,8 @@ export function TestimonialsSection({
             </div>
           </div>
 
-          <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-1/3 bg-gradient-to-r from-background sm:block" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/3 bg-gradient-to-l from-background sm:block" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-1/3 bg-gradient-to-r from-transparent sm:block" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/3 bg-gradient-to-l from-transparent sm:block" />
         </div>
       </div>
     </section>
