@@ -31,10 +31,16 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="py-28 relative overflow-hidden bg-gradient-to-b from-dark-900 via-dark-700 to-dark-900"> {/* Increased padding */}
-      <div className="absolute inset-0 bg-dark-glow bg-no-repeat bg-center opacity-40 mix-blend-soft-light"></div>
+    <section id="testimonials" className="py-28 relative overflow-hidden">
+      {/* Background patterns */}
+      <div className="absolute inset-0 bg-dark-grid opacity-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-dark-900 via-dark-700 to-dark-900 opacity-90"></div>
       
-      <div className="container relative z-10 max-w-4xl"> {/* Reduced width */}
+      {/* Decorative elements */}
+      <div className="absolute top-1/3 -right-32 w-96 h-96 rounded-full bg-gradient-to-br from-brand-purple/20 to-brand-indigo/5 blur-3xl opacity-30"></div>
+      <div className="absolute bottom-1/3 -left-32 w-96 h-96 rounded-full bg-gradient-to-br from-brand-blue/20 to-brand-purple/5 blur-3xl opacity-30"></div>
+      
+      <div className="container relative z-10 max-w-4xl">
         <TestimonialsMarquee
           title="What Our Users Are Saying"
           description="Join thousands of satisfied investors who have transformed their financial future with InvestAI."
@@ -49,10 +55,6 @@ const TestimonialsSection = () => {
           </div>
         </div>
       </div>
-      
-      {/* Decorative elements */}
-      <div className="absolute top-1/4 right-0 w-72 h-72 bg-gradient-to-br from-brand-blue/10 to-brand-purple/10 rounded-full blur-3xl -z-10 animate-pulse-slow" />
-      <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-gradient-to-br from-brand-purple/10 to-brand-indigo/10 rounded-full blur-3xl -z-10 animate-pulse-slow" style={{ animationDelay: '1.5s' }}/>
     </section>
   );
 };

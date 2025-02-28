@@ -109,6 +109,17 @@
     background-size: 24px 24px;
   }
   
+  .bg-dots-pattern {
+    background-image: radial-gradient(circle, rgba(79, 109, 245, 0.1) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  
+  .bg-dark-grid {
+    background-image: linear-gradient(to right, rgba(79, 109, 245, 0.1) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(79, 109, 245, 0.1) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  
   .neo-morphism {
     @apply bg-dark-700/80 backdrop-blur-lg border border-dark-600/80;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3),
@@ -118,6 +129,18 @@
   .glass-morphism {
     @apply backdrop-blur-lg bg-white/5 border border-white/10;
     box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.3);
+  }
+
+  .card-highlight {
+    background: radial-gradient(circle at 50% 0%, rgba(79, 109, 245, 0.2) 0%, rgba(26, 31, 43, 0.8) 70%);
+  }
+
+  .card-highlight-purple {
+    background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.2) 0%, rgba(26, 31, 43, 0.8) 70%);
+  }
+
+  .card-highlight-indigo {
+    background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.2) 0%, rgba(26, 31, 43, 0.8) 70%);
   }
 }
 
@@ -144,11 +167,11 @@
   }
   
   .feature-card {
-    @apply overflow-hidden rounded-xl bg-dark-700/50 backdrop-blur-sm border border-dark-600/50 p-6 shadow-soft transition-all duration-300 hover:shadow-glow hover:border-brand-blue/30;
+    @apply overflow-hidden rounded-xl backdrop-blur-sm border border-white/5 p-6 transition-all duration-300 hover:border-brand-blue/30 hover:shadow-glow;
   }
   
   .feature-icon {
-    @apply mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-dark-600 text-brand-blue;
+    @apply flex h-12 w-12 items-center justify-center rounded-full bg-dark-600 text-brand-blue;
   }
   
   .testimonial-card {

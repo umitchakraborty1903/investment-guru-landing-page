@@ -77,10 +77,18 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-dark-900">
+    <div className="min-h-screen bg-dark-900 bg-dots-pattern relative">
+      {/* Subtle patterns and background decorations */}
+      <div className="fixed inset-0 bg-dark-grid opacity-10 pointer-events-none"></div>
+      <div className="fixed inset-0 bg-gradient-radial from-dark-900/0 to-dark-900 pointer-events-none"></div>
+      
+      {/* Gradient orbs */}
+      <div className="fixed top-1/3 -left-64 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-brand-blue/20 to-brand-purple/10 blur-3xl opacity-30 animate-pulse-slow pointer-events-none"></div>
+      <div className="fixed bottom-1/3 -right-64 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-brand-purple/20 to-brand-indigo/10 blur-3xl opacity-30 animate-pulse-slow pointer-events-none" style={{ animationDelay: '2s' }}></div>
+      
       <FloatingNavBar />
-      <main className="max-w-5xl mx-auto px-4 sm:px-6"> {/* Reduced width and added padding */}
-        <div id="home" className="pt-16"> {/* Added more top margin */}
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10"> 
+        <div id="home" className="pt-16">
           <HeroSection />
         </div>
         <FeaturesSection />
