@@ -57,6 +57,7 @@
     @apply bg-dark-900 text-foreground font-sans scroll-smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-size: 120%; /* Increased base font size by 120% */
   }
 
   h1, h2, h3, h4, h5, h6 {

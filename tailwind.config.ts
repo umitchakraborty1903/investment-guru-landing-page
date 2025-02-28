@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,13 +17,13 @@ export default {
         'sm': '640px',
         'md': '768px',
         'lg': '1024px',
-        'xl': '1280px',
-        '2xl': '1400px'
+        'xl': '1080px',
+        '2xl': '1200px'
       }
     },
     extend: {
       maxWidth: {
-        container: "1280px",
+        container: "1080px",
       },
       colors: {
         border: 'hsl(var(--border))',

@@ -4,10 +4,10 @@ import { ChevronRight, Download, ArrowRight } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="relative pt-24 pb-16 md:pt-28 md:pb-24 overflow-hidden bg-gradient-radial from-dark-800 via-dark-900 to-dark-900">
+    <section className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-gradient-radial from-dark-800 via-dark-900 to-dark-900"> {/* Increased top padding */}
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="flex flex-col space-y-6 animate-fadeIn" style={{ animationDelay: '0.1s' }}>
+          <div className="flex flex-col space-y-8 animate-fadeIn"> {/* Increased spacing */}
             <div className="inline-flex items-center px-3 py-1 text-sm rounded-full bg-dark-700/50 text-brand-blue font-medium backdrop-blur-sm border border-dark-600/50 shadow-sm">
               <span className="mr-2">🚀</span>
               AI-Powered Investment Assistant
@@ -21,7 +21,7 @@ const HeroSection = () => {
               Let AI handle your investments with personalized strategies, real-time analysis, and risk management—all in one elegant app.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row gap-5 pt-2"> {/* Increased button spacing */}
               <a 
                 href="#download" 
                 className="group relative overflow-hidden rounded-full bg-gradient-to-r from-brand-blue to-brand-indigo px-6 py-3 font-medium text-white shadow-lg transition-all hover:shadow-neon hover:brightness-105 active:brightness-95"
@@ -44,7 +44,7 @@ const HeroSection = () => {
               </a>
             </div>
             
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 pt-2 text-sm text-muted-foreground">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 pt-4 text-sm text-muted-foreground"> {/* Increased padding */}
               <div className="flex -space-x-2">
                 <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="User" className="h-8 w-8 rounded-full border-2 border-dark-800 object-cover" />
                 <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="User" className="h-8 w-8 rounded-full border-2 border-dark-800 object-cover" />

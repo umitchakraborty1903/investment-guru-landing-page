@@ -37,9 +37,9 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section id="features" className="py-20 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900 relative overflow-hidden">
+    <section id="features" className="py-28 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900 relative overflow-hidden"> {/* Increased padding */}
       <div className="container relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-20"> {/* Reduced width and increased margin bottom */}
           <h2 className="section-title text-balance bg-gradient-to-r from-brand-blue via-brand-purple to-brand-indigo bg-clip-text text-transparent text-shadow-glow animate-fade-in" data-aos="fade-up">
             AI-Powered Features That Make Investing Simple
           </h2>

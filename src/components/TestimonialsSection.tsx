@@ -31,10 +31,10 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="py-20 relative overflow-hidden bg-gradient-to-b from-dark-900 via-dark-700 to-dark-900">
+    <section id="testimonials" className="py-28 relative overflow-hidden bg-gradient-to-b from-dark-900 via-dark-700 to-dark-900"> {/* Increased padding */}
       <div className="absolute inset-0 bg-dark-glow bg-no-repeat bg-center opacity-40 mix-blend-soft-light"></div>
       
-      <div className="container relative z-10">
+      <div className="container relative z-10 max-w-4xl"> {/* Reduced width */}
         <TestimonialsMarquee
           title="What Our Users Are Saying"
           description="Join thousands of satisfied investors who have transformed their financial future with InvestAI."

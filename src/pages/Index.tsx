@@ -79,8 +79,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-dark-900">
       <FloatingNavBar />
-      <main>
-        <div id="home">
+      <main className="max-w-5xl mx-auto px-4 sm:px-6"> {/* Reduced width and added padding */}
+        <div id="home" className="pt-16"> {/* Added more top margin */}
           <HeroSection />
         </div>
         <FeaturesSection />

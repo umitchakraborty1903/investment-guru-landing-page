@@ -36,9 +36,9 @@ const faqs = [
 
 const FaqSection = () => {
   return (
-    <section id="faq" className="py-20 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900 relative overflow-hidden">
-      <div className="container relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+    <section id="faq" className="py-28 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900 relative overflow-hidden"> {/* Increased padding */}
+      <div className="container relative z-10 max-w-4xl"> {/* Reduced width */}
+        <div className="text-center max-w-2xl mx-auto mb-20"> {/* Increased margin and reduced width */}
           <h2 className="section-title bg-gradient-to-r from-brand-blue via-brand-purple to-brand-indigo bg-clip-text text-transparent text-shadow-glow" data-aos="fade-up">
             Frequently Asked Questions
           </h2>
@@ -47,7 +47,7 @@ const FaqSection = () => {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+        <div className="max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200"> {/* Reduced width */}
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem 
